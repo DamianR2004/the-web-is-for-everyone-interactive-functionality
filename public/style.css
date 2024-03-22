@@ -118,7 +118,7 @@ textarea{
 
 .rating{
 position: relative;
-background-color: lightslategray;
+background-color: #cccccc;
 padding: 20px;
 
 & img{
@@ -136,8 +136,9 @@ padding: 20px;
 & li{
   margin: 17px 0;
 }
+}
 
-& button{
+ .top-rating button{
   border: solid 2px orange;
   border-radius: 10px;
   cursor: pointer;
@@ -153,8 +154,6 @@ padding: 20px;
   }
 }
 
-  
-}
 
 
 .top-rating ul{
@@ -173,22 +172,29 @@ float: right;
 & input{
   cursor: pointer;
 }
-
-& button{
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 10px;
-  background-color: white;
-  color: black;
-
-
-
 }
+
+.main-rating button{
+  border: none;
+  cursor: pointer;
+  color: blue;
+  background: none;
+  margin: .5em 0 0 .5em;
+
+  &:hover{
+    transform: scale(1.06);
+    transition: .3s;
+  }
+
+ }
+
 
 .common-rate{
   margin: 15px 15px;
 }
+
+
+
 
     @media screen and (min-width: 457px) {
 
@@ -229,4 +235,3 @@ float: right;
         display: none;
       }
     }
-  

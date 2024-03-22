@@ -5,7 +5,7 @@
 
 <article class="rating">
     <article class="top-rating">
-    <button type="submit" title="close"> X </button>
+    <button type="submit" title="close"> <%- include('./partials/closebutton') %> </button>
     <ul>
         <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""><p>***</p></li>
         <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""><p>***</p></li>
@@ -23,12 +23,12 @@
         <li><%- include('./partials/rating') %><p>Badkamer</p></li>
         <li><%- include('./partials/rating') %><p>Prijs</p></li>
         <li><%- include('./partials/rating') %><p>Oppervlakte</p></li>
-        <li><button type="submit">+ Voeg critirea toe</button></li>
+        <li><button type="submit"><p>+ Voeg critirea toe</button></p></li>
     </ul>
     
 </article>
 <article class="notes">
-    <h3>Jouw notities</h3>
+    <h3>Notities</h3>
     <form action="" id=""> 
         <textarea name="" form=""></textarea>
         <input type="submit">
