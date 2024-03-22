@@ -1,0 +1,60 @@
+<%- include('./partials/top') %>
+<%- include('./partials/nav') %>
+<main>
+<section class="baseplate">   
+      <% list.houses.forEach(house => { %>
+   
+        
+    <article class="houses">
+    
+    <ul>
+        <li><img class="image-size" src="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image %>" alt="image house"></li>
+      <li><%= house.f_houses_id.street %> <%= house.f_houses_id.house_nr %> <%= house.f_houses_id.house_nr_addition %></li>
+      <li><%= house.f_houses_id.postal_code %></li> 
+      <li><%= house.f_houses_id.city %></li> 
+      <li>€<%= house.f_houses_id.price %></li> 
+      <li><%= house.f_houses_id.agent %></li> 
+    </ul>
+  </article>
+
+
+<section class="rate">
+        <!-- button? -->
+      <h2>Beoordeling</h2>
+     <p>Laat een cijfer achter voor dit huis!</p>
+      <ul>
+      <li><img src="/public/funda-logo 2/funda-logo-online-rgb/01 - Funda/01-funda-Orange.png" alt=""></li>
+      <li><img src="/public/funda-logo 2/funda-logo-online-rgb/01 - Funda/01-funda-Orange.png" alt=""></li>  
+      <li><img src="/public/funda-logo 2/funda-logo-online-rgb/01 - Funda/01-funda-Orange.png" alt=""></li>
+      </ul>
+   <h2>Algemeen</h2>
+      <ul>
+        <li><p>Keuken</p></li>
+        <li><p>Ligging</p></li>
+        <li><p>Tuin</p></li>
+        <li><p>Badkamer</p></li>
+        <li><p>Prijs</p></li>
+        <li><p>Oppervlakte</p></li>
+        <li><button>Oplsaan</button></li>
+        <li><button>Verwijderen</button></li>
+      </ul>
+      <h3>Notities</h3>
+      <!--textarea-->
+       <!-- button? -->
+       <!-- button? -->
+       <ul>
+        <li>notes</li>
+       </ul>
+
+ 
+  </section>
+
+
+    
+  <% }); %>
+</section>
+
+
+
+
+  </main>
