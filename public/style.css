@@ -125,6 +125,12 @@ padding: 20px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
+
+  &:hover{
+    transform: scale(1.1);
+    transition: .3s;
+    cursor: pointer;
+  }
 }
 
 & li{
@@ -167,6 +173,15 @@ float: right;
 & input{
   cursor: pointer;
 }
+
+& button{
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+  color: black;
+
 
 
 }
