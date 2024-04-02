@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
     list-style: none;
-    font-weight: 400;
     text-decoration: none;
 }
 
@@ -122,8 +121,8 @@ background-color: #cccccc;
 padding: 20px;
 
 & img{
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 
   &:hover{
@@ -139,8 +138,9 @@ padding: 20px;
 }
 
  .top-rating button{
+  display: flex;
   border: solid 2px orange;
-  border-radius: 10px;
+  border-radius: 50%;
   cursor: pointer;
   padding: 10px;
   background-color: white;
