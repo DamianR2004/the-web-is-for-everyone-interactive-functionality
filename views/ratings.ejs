@@ -7,18 +7,20 @@
     <article class="top-rating">
     <button type="submit" title="close"> <%- include('./partials/closebutton') %> </button>
     <ul>
-        <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""><p>***</p></li>
-        <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""><p>***</p></li>
-        <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""><p>***</p></li>
+        <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""></li>
+        <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""></li>
+        <li><img src="/businessman-character-avatar-isolated_24877-60111.jpeg" alt=""></li>
     </ul>
 </article>
 <article class="main-rating">
     <form class="form-check-inline" method="post">
 
+<div class="common">
     <%- include('./partials/rating', {type: 'Algemeen'}) %><h2>Algemeen</h2>
+</div>
     
-    <ul>
-        <li><%- include('./partials/rating', {type: 'Keuken'}) %><p>Keuken</p></li>
+<ul>
+          <li><%- include('./partials/rating', {type: 'Keuken'}) %><p>Keuken</p></li>
         <li><%- include('./partials/rating', {type: 'Tuin'}) %><p>Tuin</p></li>
         <li><%- include('./partials/rating', {type: 'Ligging'}) %><p>Ligging</p></li>
         <li><%- include('./partials/rating', {type: 'Badkamer'}) %><p>Badkamer</p></li>
@@ -29,12 +31,15 @@
 </form>
 </article>
 <article class="notes">
+
+    <h1>Notities</h1>
     
-    <form action="" id="" method="post"> 
-        <label for="">Notities</label>
-        <textarea name="" form=""></textarea>
-        <input type="submit">
-        <input type="submit">
+    <form action="#" id="notities" method="post"> 
+        <label for="notities">Voer notities in</label>
+        <textarea name="notities" form="notities"></textarea>
+        <input type="submit" value="Opslaan">
+        <input type="submit" value="Verwijderen">
+        
       </form>
       
 

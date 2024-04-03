@@ -102,12 +102,6 @@ html, body{
 }
 
 
-textarea{
-  margin-top: 3em;
-  width: 200px;
-  height: 100px;
-  resize: none;
-}
 
 .outer-rating{
   display: flex;
@@ -118,6 +112,7 @@ textarea{
 .rating{
 position: relative;
 background-color: #cccccc;
+width: 500px;
 padding: 20px;
 
 & img{
@@ -134,6 +129,9 @@ padding: 20px;
 
 & li{
   margin: 17px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 }
 
@@ -167,12 +165,101 @@ padding: 20px;
 }
 
 .rate{
-float: right;
+  display: flex;
+  justify-content: end; 
 
-& input{
+
+  
+
+& input {
   cursor: pointer;
+ 
 }
 }
+
+/* alle labels */
+
+.rate label{
+  display: block;
+  padding: .125em;
+  color: grey;
+}
+
+.rate label::after{
+  content: "★";
+  
+}
+
+/* input:checked + label ,
+
+label:has( +input:checked),
+
+label:has(+input +label +input:checked),
+
+label:has(+input +label +input +label +input:checked),
+
+label:has(+input +label +input +label +input +label  +input:checked){
+  color: gold;
+}
+
+*/
+.rate input{
+  position: absolute;
+  left: -999em;
+}
+
+/*
+label:hover,
+input:checked + label:hover,
+label:has(+input +label:hover),
+label:has(+input +label +input +label:hover),
+label:has(+input +label +input +label +input +label:hover),
+label:has(+ input + label + input + label + input + label + input + label:hover)
+{
+  transform: scale(1.2);
+  color: crimson;
+}
+
+label:hover:has(+input:checked),
+label:hover:has(+input + label +input:checked)
+
+{
+  transform: scale(1.2);
+  color: crimson;
+} */
+
+
+
+
+/* dit werkt altijd */
+
+input:checked + label,
+
+
+.rate:has(input:nth-of-type(5):checked) label:nth-of-type(-n + 5),
+/* als de 4e gechecked is dan wordt er vanaf de 4e teruggeteld en goud gemaakt */
+.rate:has(input:nth-of-type(4):checked) label:nth-of-type(-n + 4),
+.rate:has(input:nth-of-type(3):checked) label:nth-of-type(-n + 3),
+.rate:has(input:nth-of-type(2):checked) label:nth-of-type(-n + 2),
+.rate:has(input:nth-of-type(1):checked) label:nth-of-type(-n + 1){
+  color: gold;
+}
+
+.rate:has(label:nth-of-type(5):hover) label:nth-of-type(-n + 5),
+.rate:has(label:nth-of-type(4):hover) label:nth-of-type(-n + 4),
+.rate:has(label:nth-of-type(3):hover) label:nth-of-type(-n + 3),
+.rate:has(label:nth-of-type(2):hover) label:nth-of-type(-n + 2),
+.rate:has(label:nth-of-type(1):hover) label:nth-of-type(-n + 1){
+  color: crimson;
+  transform: scale(1.2);
+}
+
+.rate:focus-within{
+  outline: solid .1px blue;
+}
+
+
+
 
 .main-rating button{
   border: none;
@@ -187,12 +274,32 @@ float: right;
   }
 
  }
-
-
-.common-rate{
-  margin: 15px 15px;
+ 
+.notes{
+  margin-top: 3em;
 }
 
+.notes input{
+  border: none;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: solid 1px orange;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+
+ textarea{
+  box-sizing: border-box;
+  display: block;
+  resize: none; 
+  border-radius: 10px;
+  height: 150px;
+  padding: 5px;
+  max-width: 100%;
+ }
 
 
 
@@ -235,3 +342,4 @@ float: right;
         display: none;
       }
     }
+
