@@ -8,7 +8,7 @@
     <article class="houses">
     
     <ul>
-        <li><img class="image-size" src="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image %>" alt="image house"></li>
+        <li><img class="image-size" src="https://fdnd-agency.directus.app/assets/<%= house.f_houses_id.poster_image.id %>" alt="image house" height="<%= house.f_houses_id.poster_image.height %>" width="<%= house.f_houses_id.poster_image.width %>"> </li>
       <li><%= house.f_houses_id.street %> <%= house.f_houses_id.house_nr %> <%= house.f_houses_id.house_nr_addition %></li>
       <li><%= house.f_houses_id.postal_code %></li> 
       <li><%= house.f_houses_id.city %></li> 

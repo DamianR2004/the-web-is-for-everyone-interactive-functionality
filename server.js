@@ -7,6 +7,8 @@ import fetchJson from './helpers/fetch-json.js'
 // Maak een nieuwe express app aan
 const app = express()
 
+const message_score_page_data = [];
+
 // Stel ejs in als template engine
 app.set('view engine', 'ejs')
 
@@ -18,6 +20,7 @@ app.use(express.static('public'))
 
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({extended: true}))
+
 
 app.get('/', function(request, response) {
 	response.render('homepage')
@@ -52,16 +55,24 @@ app.get('/house', function (request, response) {
 })
 
 
+
 app.get('/lijsten/:id', function (request, response) {
     fetchJson('https://fdnd-agency.directus.app/items/f_list/' + request.params.id + '?fields=*.*.*').then((apiData) => {
         response.render('lijst.ejs', {list: apiData.data})  
         console.log(apiData.data.houses) 
-    })
+    });
   })
 
 
+  app.post('/ratings/:id', function (request, response) {
+   
+    message_score_page_data.push(request.body.);
 
+    // the if enhaced can not in the oter fetch so it needs to be seperated
+    fetchJson(`https://fdnd-agency.directus.app/items/f_houses/${request.params.id}/?fields=*.*.*`)
+    console.log(request.body)
 
+  })
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)
 
